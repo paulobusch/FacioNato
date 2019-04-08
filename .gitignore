@@ -1,0 +1,7 @@
+.vs/
+*.log
+
+packages/
+
+WindowsFormsFacioNato/obj/
+WindowsFormsFacioNato/bin/

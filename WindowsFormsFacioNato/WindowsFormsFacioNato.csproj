@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B21BA95-EB15-4A64-AFC8-C4DDA80BAE38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsPrototipo</RootNamespace>
+    <AssemblyName>WindowsFormsPrototipo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppFacioNato\CadBadroom\View\FormCadBadroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppFacioNato\CadBadroom\View\FormCadBadroom.Designer.cs">
+      <DependentUpon>FormCadBadroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppFacioNato\CadPeople\View\FormCadPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppFacioNato\CadPeople\View\FormCadPeople.Designer.cs">
+      <DependentUpon>FormCadPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppFacioNato.cs" />
+    <Compile Include="AppFacioNato\ConfRecurrence\View\FormConfRecurrence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppFacioNato\ConfRecurrence\View\FormConfRecurrence.Designer.cs">
+      <DependentUpon>FormConfRecurrence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppFacioNato\FacioNato\View\FormFacioNato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppFacioNato\FacioNato\View\FormFacioNato.Designer.cs">
+      <DependentUpon>FormFacioNato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppFacioNato\CadBadroom\View\FormCadBadroom.resx">
+      <DependentUpon>FormCadBadroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppFacioNato\CadPeople\View\FormCadPeople.resx">
+      <DependentUpon>FormCadPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppFacioNato\ConfRecurrence\View\FormConfRecurrence.resx">
+      <DependentUpon>FormConfRecurrence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppFacioNato\CadBadroom\Controller\" />
+    <Folder Include="AppFacioNato\CadBadroom\Model\" />
+    <Folder Include="AppFacioNato\CadPeople\Controller\" />
+    <Folder Include="AppFacioNato\CadPeople\Model\" />
+    <Folder Include="AppFacioNato\ConfRecurrence\Controller\" />
+    <Folder Include="AppFacioNato\ConfRecurrence\Model\" />
+    <Folder Include="AppFacioNato\FacioNato\Controller\" />
+    <Folder Include="AppFacioNato\FacioNato\Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\lup.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
